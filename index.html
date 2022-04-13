@@ -12,7 +12,6 @@
     En programmation, les nombres entiers sont aussi appelés entiers ou integers ; les nombres avec des chiffres après la virgule sont aussi appelés nombres en virgule flottante ou floating-point.
 
     A class allows you to create objects faster. Here is how to create one :
-
     class Book {
         constructor(title, author, pages) {
             this.title = title;
@@ -29,5 +28,39 @@
         author: "Will Alexander",
         pages: 250
     }
+
+    Arrays
+
+    let guests = ["Sarah Kate", "Audrey Simon", "Will Alexander"];
+
+    Length :
+    let guests = ["Will Alexander", "Sarah Kate", "Audrey Simon"];
+    let howManyGuests = guests.length; // 3
+
+    Push :
+    guests.push("Tao Perkington"); // ajoute "Tao Perkington" à la fin de notre tableau guests
+
+    Unshift :
+    guests.unshift("Tao Perkington"); // "Tao Perkington" est ajouté au début du tableau guests
+
+    Pop :
+    guests.pop(); // supprimer le dernier élément du tableau
+
+    
+    Logical comparisons
+
+    let userLoggedIn = true;
+    let UserHasPremiumAccount = true;
+    let userHasMegaPremiumAccount = false;
+
+    userLoggedIn && userHasPremiumAccount; // true
+    userLoggedIn && userHasMegaPremiumAccount; // false
+
+    userLoggedIn || userHasPremiumAccount; // true
+    userLoggedIn || userHasMegaPremiumAccount; // true
+
+    !userLoggedIn; // false
+    !userHasMegaPremiumAccount; // true
+
 </body>
 </html>
