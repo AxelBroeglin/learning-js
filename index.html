@@ -10,5 +10,24 @@
     <H1>What I learned about JS</H1>
 
     En programmation, les nombres entiers sont aussi appelés entiers ou integers ; les nombres avec des chiffres après la virgule sont aussi appelés nombres en virgule flottante ou floating-point.
+
+    A class allows you to create objects faster. Here is how to create one :
+
+    class Book {
+        constructor(title, author, pages) {
+            this.title = title;
+            this.author = author;
+            this.pages = pages;
+        }
+    }
+
+    Then use new to create classes :
+    let myBook = new Book("L'Histoire de Tao", "Will Alexander", 250);
+    //Cette ligne crée l'objet suivant :
+    {
+        title: "L'Histoire de Tao",
+        author: "Will Alexander",
+        pages: 250
+    }
 </body>
 </html>
