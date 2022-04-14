@@ -62,5 +62,56 @@
     !userLoggedIn; // false
     !userHasMegaPremiumAccount; // true
 
+    Loops
+
+    For :
+    const numberOfPassengers = 10;
+    for (let i = 0; i < numberOfPassengers; i++) {
+    console.log("Passager embarqué !");
+    }
+    
+    For in :
+    const passengers = [
+    "Will Alexander",
+    "Sarah Kate'",
+    "Audrey Simon",
+    "Tao Perkington"
+    ]
+
+    for (let i in passengers) {
+    console.log("Embarquement du passager " + passengers[i]);
+    }
+    i starts at 0 and +1 at each loop.
+    This is useful when manipulating a precise i in iteration.
+
+    For of :
+    const passengers = [
+    "Will Alexander",
+    "Sarah Kate",
+    "Audrey Simon",
+    "Tao Perkington"
+    ]
+
+    for (let passenger of passengers) {
+    console.log("Embarquement du passager " + passenger);
+    }
+    If precise i not necessary, it is easier to use for of.
+
+    Even more useful if array has objects : 
+    const passengers = [
+    {
+        name: "Will Alexander",
+        ticketNumber: 209542
+    },
+    
+    {
+        name: "Sarah Kate",
+        ticketNumber: 169336
+    }]
+    for (let passenger of passengers) {
+    console.log('Embarquement du passager ' + passenger.name + ' avec le ticket numéro ' + passenger.ticketNumber);
+    }
+
+
 </body>
 </html>
