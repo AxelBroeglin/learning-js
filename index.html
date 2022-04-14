@@ -112,6 +112,45 @@
     console.log('Embarquement du passager ' + passenger.name + ' avec le ticket numéro ' + passenger.ticketNumber);
     }
 
+    While
+
+    let seatsLeft = 10;
+    let passengersStillToBoard = 8;
+    let passengersBoarded = 0;
+
+    while (seatsLeft > 0 && passengersStillToBoard > 0) {
+        passengersBoarded++; // un passager embarque
+        passengersStillToBoard--; // donc il y a un passager de moins à embarquer
+        seatsLeft--; // et un siège de moins
+    }
+
+    console.log(passengersBoarded); // imprime 8, car il y a 8 passagers pour 10 sièges
+
+    For and while :
+    - for, when we know the number of iterations
+    - while, when we don't
+
+
+    Méthodes d'instances et classes
+
+
+    Il est possible d'ajouter des méthodes d'instance aux classes, des fonctions aux classes :
+    class BankAccount {
+        constructor(owner, balance) {
+           this.owner = owner;
+           this.balance = balance;
+        }
+        showBalance() {
+           console.log("Solde: " + this.balance + " EUR");
+        }
+     }
+     La classe étant en création on utilise "this."
+
+     Si l'on utilise la classe :
+
+     const newAccount = new BankAccount("Will Alexander", 500);
+
+    newAccount.showBalance(); // imprime "Solde: 500 EUR" à la console
 
 </body>
 </html>
