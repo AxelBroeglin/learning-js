@@ -152,5 +152,17 @@
 
     newAccount.showBalance(); // imprime "Solde: 500 EUR" à la console
 
+    Static classes :
+    A method or a property that belong to a class and not the object.
+    class BePolite {
+    
+        static sayHello() {
+            console.log("Hello!");
+        }
+        constructor(greetings){
+            this.greetings=greetings;
+        }    
+    }
+    sayHello is attached to BePolite, and is independant from greetings.
 </body>
 </html>
