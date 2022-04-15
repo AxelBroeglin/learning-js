@@ -255,10 +255,10 @@
     <h3>stopPropagation()</h3>
     <p>Permet de stopper la propagation. Si on click sur un élément intérieur, et qu'on ne veut pas que ce click se propage à l'élément qui le contient. <br>
     Exemple : <br>
-    const elt = document.getElementById('mon-lien');    // On récupère l'élément sur lequel on veut détecter le clic <br>
-    elt.addEventListener('click', function(event) {     // On écoute l'événement click, notre callback prend un paramètre que nous avons appelé event ici <br>
-    event.preventDefault();                         // On utilise la fonction preventDefault de notre objet event pour empêcher le comportement par défaut de cet élément lors du clic de la souris <br>
-    }); <br>
+    elementInterieur.addEventListener('click', function(event) { <br>
+    event.stopPropagation(); <br>
+    elementAvecMessage.innerHTML = "Message de l'élément intérieur"; <br>
+    });
     </p>
 
 
