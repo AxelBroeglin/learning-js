@@ -223,9 +223,43 @@
         elt.removeAttribute("name");               // Supprime my-password <br>
     </p>
 
+    <p><b>Create, replace, remove children</b><br>
+        Create new element then add it as a child to another one : <br>
+        const newElt = document.createElement("div");<br>
+        let elt = document.getElementById("main");<br>
 
+        elt.appendChild(newElt);<br>
 
+        elt.removeChild(newElt);    // Supprime l'élément newElt de l'élément elt <br>
+        elt.replaceChild(document.createElement("article"), newElt);    // Remplace l'élément newElt par un nouvel élément de type article <br>
+    </p>
 
+    <h2>Events</h2>
+
+    <h3>onClick</h3>
+    <p>const elt = document.getElementById('mon-lien');    // On récupère l'élément sur lequel on veut détecter le clic <br>
+        elt.addEventListener('click', function() {          // On écoute l'événement click <br>
+            elt.innerHTML = "C'est cliqué !";               // On change le contenu de notre élément pour afficher "C'est cliqué !" <br>
+        });
+    </p>
+
+    <h3>preventDefault()</h3>
+    <p>Permet d'empecher l'execution de l'évènement par default entrainé par action, comme l'ouverture d'une page après un click sur un lien <br>
+    Exemple : <br>
+    const elt = document.getElementById('mon-lien');    // On récupère l'élément sur lequel on veut détecter le clic <br>
+    elt.addEventListener('click', function(event) {     // On écoute l'événement click, notre callback prend un paramètre que nous avons appelé event ici <br>
+    event.preventDefault();                         // On utilise la fonction preventDefault de notre objet event pour empêcher le comportement par défaut de cet élément lors du clic de la souris <br>
+    }); <br>
+    </p>
+
+    <h3>stopPropagation()</h3>
+    <p>Permet de stopper la propagation. Si on click sur un élément intérieur, et qu'on ne veut pas que ce click se propage à l'élément qui le contient. <br>
+    Exemple : <br>
+    const elt = document.getElementById('mon-lien');    // On récupère l'élément sur lequel on veut détecter le clic <br>
+    elt.addEventListener('click', function(event) {     // On écoute l'événement click, notre callback prend un paramètre que nous avons appelé event ici <br>
+    event.preventDefault();                         // On utilise la fonction preventDefault de notre objet event pour empêcher le comportement par défaut de cet élément lors du clic de la souris <br>
+    }); <br>
+    </p>
 
 
 </body>
