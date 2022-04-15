@@ -8,9 +8,11 @@
 </head>
 <body>
     <H1>What I learned about JS</H1>
+    <p>En programmation, les nombres entiers sont aussi appelés entiers ou integers ; les nombres avec des chiffres après la virgule sont aussi appelés nombres en virgule flottante ou floating-point.
+    </p>
 
-    En programmation, les nombres entiers sont aussi appelés entiers ou integers ; les nombres avec des chiffres après la virgule sont aussi appelés nombres en virgule flottante ou floating-point.
-
+    <h2>Class</h2>
+    <p>
     A class allows you to create objects faster. Here is how to create one :
     class Book {
         constructor(title, author, pages) {
@@ -19,7 +21,8 @@
             this.pages = pages;
         }
     }
-
+    </p>
+    <p>
     Then use new to create classes :
     let myBook = new Book("L'Histoire de Tao", "Will Alexander", 250);
     //Cette ligne crée l'objet suivant :
@@ -28,141 +31,202 @@
         author: "Will Alexander",
         pages: 250
     }
+        </p>
 
-    Arrays
+    <h2>Arrays</h2>
+    <p>let guests = ["Sarah Kate", "Audrey Simon", "Will Alexander"];</p>
 
-    let guests = ["Sarah Kate", "Audrey Simon", "Will Alexander"];
+    <h3>Length :</h3>
+    <p>guests = ["Will Alexander", "Sarah Kate", "Audrey Simon"]; <br>
+    let howManyGuests = guests.length;</p>
 
-    Length :
-    let guests = ["Will Alexander", "Sarah Kate", "Audrey Simon"];
-    let howManyGuests = guests.length; // 3
+    <h3>Push :</h3>
+    <p>guests.push("Tao Perkington"); // ajoute "Tao Perkington" à la fin de notre tableau guests</p>
 
-    Push :
-    guests.push("Tao Perkington"); // ajoute "Tao Perkington" à la fin de notre tableau guests
+    <h3>Unshift :</h3>
+    <p>guests.unshift("Tao Perkington"); // "Tao Perkington" est ajouté au début du tableau guests</p>
 
-    Unshift :
-    guests.unshift("Tao Perkington"); // "Tao Perkington" est ajouté au début du tableau guests
+    <h3>Pop :</h3>
+    <p>guests.pop(); // supprimer le dernier élément du tableau</p>
 
-    Pop :
-    guests.pop(); // supprimer le dernier élément du tableau
+    <h2>Logical comparisons</h2>
 
-    
-    Logical comparisons
+    <p>let userLoggedIn = true; <br><br>
+    let UserHasPremiumAccount = true; <br>
+    let userHasMegaPremiumAccount = false; <br><br>
 
-    let userLoggedIn = true;
-    let UserHasPremiumAccount = true;
-    let userHasMegaPremiumAccount = false;
+    userLoggedIn && userHasPremiumAccount; // true <br>
+    userLoggedIn && userHasMegaPremiumAccount; // false <br><br>
 
-    userLoggedIn && userHasPremiumAccount; // true
-    userLoggedIn && userHasMegaPremiumAccount; // false
+    userLoggedIn || userHasPremiumAccount; // true <br>
+    userLoggedIn || userHasMegaPremiumAccount; // true <br><br>
 
-    userLoggedIn || userHasPremiumAccount; // true
-    userLoggedIn || userHasMegaPremiumAccount; // true
+    !userLoggedIn; // false <br>
+    !userHasMegaPremiumAccount; // true <br> </p>
 
-    !userLoggedIn; // false
-    !userHasMegaPremiumAccount; // true
+   <h2>Loops</h2>
 
-    Loops
-
-    For :
-    const numberOfPassengers = 10;
-    for (let i = 0; i < numberOfPassengers; i++) {
-    console.log("Passager embarqué !");
+    <h3>For :</h3>
+    const numberOfPassengers = 10;<br>
+    for (let i = 0; i < numberOfPassengers; i++) {<br>
+    console.log("Passager embarqué !");<br>
     }
     
-    For in :
-    const passengers = [
-    "Will Alexander",
-    "Sarah Kate'",
-    "Audrey Simon",
-    "Tao Perkington"
-    ]
+    <h3>For in :</h3>
+    const passengers = [<br>
+    "Will Alexander",<br>
+    "Sarah Kate'",<br>
+    "Audrey Simon",<br>
+    "Tao Perkington"<br>
+    ]<br>
 
-    for (let i in passengers) {
-    console.log("Embarquement du passager " + passengers[i]);
-    }
-    i starts at 0 and +1 at each loop.
-    This is useful when manipulating a precise i in iteration.
+    for (let i in passengers) {<br>
+    console.log("Embarquement du passager " + passengers[i]);<br>
+    }<br>
+    i starts at 0 and +1 at each loop.<br>
+    This is useful when manipulating a precise i in iteration.<br>
 
-    For of :
-    const passengers = [
-    "Will Alexander",
-    "Sarah Kate",
-    "Audrey Simon",
-    "Tao Perkington"
-    ]
+    <h3>For of :</h3>
+    const passengers = [<br>
+    "Will Alexander",<br>
+    "Sarah Kate",<br>
+    "Audrey Simon",<br>
+    "Tao Perkington"<br>
+    ]<br>
 
-    for (let passenger of passengers) {
-    console.log("Embarquement du passager " + passenger);
-    }
-    If precise i not necessary, it is easier to use for of.
+    for (let passenger of passengers) {<br>
+    console.log("Embarquement du passager " + passenger);<br>
+    }<br>
+    If precise i not necessary, it is easier to use for of.<br>
 
-    Even more useful if array has objects : 
-    const passengers = [
-    {
-        name: "Will Alexander",
-        ticketNumber: 209542
-    },
+    Even more useful if array has objects : <br>
+    const passengers = [<br>
+    {<br>
+        name: "Will Alexander",<br>
+        ticketNumber: 209542<br>
+    },<br>
     
-    {
-        name: "Sarah Kate",
-        ticketNumber: 169336
-    }]
-    for (let passenger of passengers) {
-    console.log('Embarquement du passager ' + passenger.name + ' avec le ticket numéro ' + passenger.ticketNumber);
-    }
+    {<br>
+        name: "Sarah Kate",<br>
+        ticketNumber: 169336<br>
+    }]<br><br>
+    for (let passenger of passengers) {<br>
+    console.log('Embarquement du passager ' + passenger.name + ' avec le ticket numéro ' + passenger.ticketNumber);<br>
+    }<br>
 
-    While
+    <h3>While</h3>
 
-    let seatsLeft = 10;
-    let passengersStillToBoard = 8;
-    let passengersBoarded = 0;
+    let seatsLeft = 10;<br>
+    let passengersStillToBoard = 8;<br>
+    let passengersBoarded = 0;<br><br>
 
-    while (seatsLeft > 0 && passengersStillToBoard > 0) {
-        passengersBoarded++; // un passager embarque
-        passengersStillToBoard--; // donc il y a un passager de moins à embarquer
-        seatsLeft--; // et un siège de moins
-    }
+    while (seatsLeft > 0 && passengersStillToBoard > 0) {<br>
+        passengersBoarded++; // un passager embarque<br>
+        passengersStillToBoard--; // donc il y a un passager de moins à embarquer<br>
+        seatsLeft--; // et un siège de moins<br>
+    }<br><br>
 
-    console.log(passengersBoarded); // imprime 8, car il y a 8 passagers pour 10 sièges
+    console.log(passengersBoarded); // imprime 8, car il y a 8 passagers pour 10 sièges<br><br>
 
-    For and while :
-    - for, when we know the number of iterations
-    - while, when we don't
-
-
-    Méthodes d'instances et classes
+    <h3>For and while :</h3>
+    - for, when we know the number of iterations<br>
+    - while, when we don't<br><br>
 
 
-    Il est possible d'ajouter des méthodes d'instance aux classes, des fonctions aux classes :
-    class BankAccount {
-        constructor(owner, balance) {
-           this.owner = owner;
-           this.balance = balance;
-        }
-        showBalance() {
-           console.log("Solde: " + this.balance + " EUR");
-        }
-     }
-     La classe étant en création on utilise "this."
+    <h2>Méthodes d'instances et classes</h2>
 
-     Si l'on utilise la classe :
 
-     const newAccount = new BankAccount("Will Alexander", 500);
+    Il est possible d'ajouter des méthodes d'instance aux classes, des fonctions aux classes :<br>
+    class BankAccount {<br>
+        constructor(owner, balance) {<br>
+           this.owner = owner;<br>
+           this.balance = balance;<br>
+        }<br>
+        showBalance() {<br>
+           console.log("Solde: " + this.balance + " EUR");<br>
+        }<br>
+     }<br>
+     La classe étant en création on utilise "this."<br><br>
 
-    newAccount.showBalance(); // imprime "Solde: 500 EUR" à la console
+     Si l'on utilise la classe :<br><br>
 
-    Static classes :
-    A method or a property that belong to a class and not the object.
-    class BePolite {
+     const newAccount = new BankAccount("Will Alexander", 500);<br>
+
+    newAccount.showBalance(); // imprime "Solde: 500 EUR" à la console<br>
+
+    <h2>Static classes :</h2>
+    A method or a property that belong to a class and not the object.<br>
+    class BePolite {<br><br>
     
-        static sayHello() {
-            console.log("Hello!");
-        }
-        constructor(greetings){
-            this.greetings=greetings;
-        }    
-    }
-    sayHello is attached to BePolite, and is independant from greetings.
+        static sayHello() {<br>
+            console.log("Hello!");<br>
+        }<br>
+        constructor(greetings){<br>
+            this.greetings=greetings;<br>
+        }    <br>
+    }<br>
+    sayHello is attached to BePolite, and is independant from greetings.<br><br>
+
+    <h2>DOM</h2>
+
+    <h3>getElementById</h3>
+    <p>document.getElementById()</p>
+    <p>document.getElementsByClassName() creates an array</p>
+    <p>document.getElementsByTagName() creates an array</p>
+    <p>document.querySelector() exemple : document.querySelector("#myId p.article > a") renvoie le premier élément qui correspond à cette description ou NULL si aucun élément trouvé</p>
+    <p>querySelectorAll pour obtenir une liste avec TOUS les éléments</p>
+
+    <h3>Element</h3>
+    <p>Exemple : const elt = document.getElementById('main');</p>
+    <p>elt.children - children de l'element<br>
+
+        elt.parentElement - parent de l'element<br>
+        
+        elt.nextElementSibling - next sibling de l'element<br>
+        
+        elt.previousElementSibling - previous sibling de l'element</p>
+
+    <h3>Change the DOM</h3>
+    <p><b>textContent :</b><br>modifie ou récupère le texte d'un élément <br>
+    Exemple : <br>
+    // On obtient le contenu textuel : <br>
+    var text = document.getElementById("div").textContent;<br>
+    // On définit le contenu textuel :<br>
+    document.getElementById("div").textContent = "Ceci est un exemple de texte";</p>
+
+    <p><b>innerHTML</b> modifie ou récupère le contenu HTML d'un élément <br>
+        Exemple : <br>
+        let elt = document.getElementById('main');
+        elt.innerHTML = "< ul>< li>Elément 1< / li>< li>Elément 2< / li> < / ul>";
+    </p>
+
+    <p><b>Change the class</b> <br>
+        elt.classList.add("nouvelleClasse");    // Ajoute la classe nouvelleClasse à l'élément <br>
+        elt.classList.remove("nouvelleClasse"); // Supprime la classe nouvelleClasse que l'on venait d'ajouter <br>
+        elt.classList.contains("nouvelleClasse");   // Retournera false car on vient de la supprimer <br>
+        elt.classList.replace("oldClass", "newClass"): // Remplacera oldClass par newClass si oldClass était présente sur l'élément <br>
+    </p>
+
+    <p><b>Change the style</b><br>
+        elt.style.color = "#fff";      // Change la couleur du texte de l'élément à blanche <br>
+        elt.style.backgroundColor = "#000"; // Change la couleur de fond de l'élément en noir <br>
+        elt.style.fontWeight = "bold"; // Met le texte de l'élément en gras <br>
+    </p>
+
+    <p><b>Change the attribute</b><br>
+        Pour définir ou remplacer les attributs d'un élément, vous pouvez utiliser la fonction  setAttribute . <br>
+        element.setAttribute(< name >, < value > ) prend en paramètres le nom de l'attribut et sa valeur. <br>
+        Exemple : <br>
+        elt.setAttribute("type", "password");   // Change le type de l'input en un type password <br>
+        elt.setAttribute("name", "my-password");    // Change le nom de l'input en my-password <br>
+        elt.getAttribute("name");               // Retourne my-password <br>
+        elt.removeAttribute("name");               // Supprime my-password <br>
+    </p>
+
+
+
+
+
+
 </body>
 </html>
